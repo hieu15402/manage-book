@@ -21,7 +21,7 @@ This is a simple Book Management API built using Spring Boot 3.4.1 and Java 17, 
 
 ### 1. Create a Book
 
-- **URL:** `/books`
+- **URL:** `/api/books`
 - **Method:** `POST`
 - **Request Body:**
   ```json
@@ -49,7 +49,7 @@ This is a simple Book Management API built using Spring Boot 3.4.1 and Java 17, 
   
 ### 2. Get a Book by ID
 
-- **URL:** `/books/{id}`
+- **URL:** `/api/books/{id}`
 - **Method:** `GET`
 - **Response:**
   ```json
@@ -71,7 +71,7 @@ This is a simple Book Management API built using Spring Boot 3.4.1 and Java 17, 
   }
 ### 3. Get Books with filtering and pagination
 
-- **URL:** `/books`
+- **URL:** `/api/books`
 - **Method:** `GET`
 - **Query Parameters:**
   - page: Page number (default: 1)
@@ -134,4 +134,30 @@ This is a simple Book Management API built using Spring Boot 3.4.1 and Java 17, 
             }
         ]
     }
+  }
+### 4. Update a book
+
+- **URL:** `/api/books/{id}`
+- **Method:** `PUT`
+- **Request Body:**
+  ```json
+  {
+    "title": "Effective Java",
+    "authorId": 1, 
+    "publishedDate": "2022-12-03", 
+    "price": 42.00 
+  }
+- **Response:**
+  ```json
+  {
+      "code": 200,
+      "message": "Book updated successfully",
+      "result": {
+          "id": 6,
+          "title": "Effective Java",
+          "authorId": 1,
+          "publishedDate": "2022-12-03",
+          "isbn": "9780134685121",
+          "price": 42.00
+      }
   }
