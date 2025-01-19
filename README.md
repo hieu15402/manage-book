@@ -46,3 +46,26 @@ This is a simple Book Management API built using Spring Boot 3.4.1 and Java 17, 
         "price": 40.00
     }
   }
+  
+### 2. Get a Book by ID
+
+- **URL:** `/books/{id}`
+- **Method:** `GET`
+- **Response:**
+  ```json
+   {
+    "code": 200,
+    "message": "Book fetched successfully",
+    "result": {
+        "id": 6,
+        "title": "Effective Java",
+        "author": {
+            "id": 1,
+            "name": "Nguyen Minh Hieu",
+            "nationality": "Viet Nam"
+        },
+        "publishedDate": "2022-12-03",
+        "isbn": "9780134685121",
+        "price": 40.00
+    }
+  }
