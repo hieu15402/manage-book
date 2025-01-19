@@ -161,3 +161,13 @@ This is a simple Book Management API built using Spring Boot 3.4.1 and Java 17, 
           "price": 42.00
       }
   }
+### 5. Delete a book
+
+- **URL:** `/api/books/{id}`
+- **Method:** `DELETE`
+- **Response:**
+  ```json
+  {
+    "code": 200,
+    "message": "Book deleted successfully"
+  }
