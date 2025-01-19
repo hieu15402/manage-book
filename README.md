@@ -171,3 +171,15 @@ This is a simple Book Management API built using Spring Boot 3.4.1 and Java 17, 
     "code": 200,
     "message": "Book deleted successfully"
   }
+## Features
+- The application includes proper error handling, and you will receive meaningful error messages if something goes wrong. Some common error codes are:
+  - 400 Bad Request: Invalid input
+  - 404 Not Found: Book or author not found.
+  - 409 Conflict: ISBN already exists.
+## Technologies Used
+- Spring Boot 3.4.1
+- Java 17
+- PostgreSQL
+- JPA (Hibernate)
+## Conclusion
+- This is a simple Book Management System that demonstrates how to build a RESTful API with Spring Boot, validate inputs, handle errors, and interact with a PostgreSQL database.
